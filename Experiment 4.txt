@@ -1,0 +1,38 @@
+TRACEROUTE COMMANDS:-
+(note:shows routes between destination and start server;the * signs r either due to icmp packets being blocked by firewall or due to not responding in a timely manner i.e. Request Timed Out)
+
+traceroute www.google.com
+traceroute - - mtu www.google.com
+traceroute -V
+traceroute -m 3 www.google.com
+Ressoniassance:
+
+WHOIS COMMANDS:-
+(used to find info abt a particular domain or the IP address)
+
+sudo apt install whois(if not installed)
+whois google.com
+ping google.com(copy the IP address) and whois ____(paste the ip address)
+
+
+DIG COMMANDS:-
+(used to querry DNS name servers for dns lookup related tasks)
+
+dig www.redhat.com
+dig SOA www.redhat.com(SOA=start of authority record)
+dig www.redhat.com +noquestion
+dig www.redhat.com +noall
+dig -t MX redhat.com +noall +answer
+dig -t NS redhat.com +noall +answer
+dig redhat.com +short
+
+NSLOOKUP COMMANDS:-
+(similar to dig but has diff queries,used to troubleshoot NS)
+
+nslookup yahoo.com
+nslookup _____ (copy address generated from prev command)
+nslookup ______ (copy “name”generated from prev command)
+nslookup -query=mx yahoo.com
+nslookup -query=ns yahoo.com
+nslookup -type=SOA yahoo.com
+nslookup -debug yahoo.com

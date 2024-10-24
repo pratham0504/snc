@@ -1,0 +1,11 @@
+nmap [scan type(s)][Option] {Target Specification}
+
+nmap –sS scanme.nmap.org
+
+nmap –sP 192.168.0.1 (Scanning for Hosts)
+
+nmap –sT 192.168.0.1  (Scanning for TCP Ports)
+
+nmap -sS 140.130.19.1  (SYN Scan)
+
+npm -sF <target_host> (Fumble)

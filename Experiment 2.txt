@@ -1,0 +1,17 @@
+cd Desktop
+
+cd Kk
+
+openssl enc -aes-128-cbc -e -in Plain.txt -out Ubai.txt -k 00112233445566778899aabbccddeeff -iv 0102030405060708;
+
+openssl enc -des-cbc -d -in Ubai.txt -out Kanishq.txt -k 001122334455667788 -iv 01020304;
+
+openssl enc -aes-128-cbc -d -in Ubai.txt -out Kanishq.txt -k 00112233445566778899aabbccddeeff -iv 0102030405060708;
+
+
+Images:-
+
+openssl enc -aes-128-cbc -in images.jpeg -out fit_dec.png -e -k 0112233445566778899aabbccddeeff -iv 0102030405060708
+
+openssl des -aes-128-cbc -d -in fit_dec.png -out finish.jpeg -k 0112233445566778899aabbccddeeff -iv 0102030405060708
+
